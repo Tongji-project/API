@@ -43,7 +43,7 @@ app.post('/record', function (req, res) {
 })
 
 
-app.get('/record', function (req, res) {
+app.get('/records', function (req, res) {
   queryData('record', function(results) {
       res.send(results)
   });
@@ -57,7 +57,7 @@ app.post('/device', function (req, res) {
     })
 })
 
-app.get('/device', function (req, res) {
+app.get('/devices', function (req, res) {
   queryData('device', function(results) {
       res.send(results)
   });
