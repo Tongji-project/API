@@ -24,9 +24,9 @@ fetch all the devices from remote database
 ### response
 ```json
 //failed
-	{'result': 'failed' }
+	{"result": "failed"}
 //success
-	{'result': 'success' }
+	{"result": "success"}
 ```
 
 ## fetch all the records
@@ -45,9 +45,9 @@ fetch all the records from remote database
 ### response
 ```json
 //failed
-	{'result': 'failed' }
+	{"result": "failed"}
 //success
-	{'result': 'success' }
+	{"result": "success"}
 ```
 
 
@@ -67,19 +67,19 @@ insert a new device
 ### Data Params
 ```json
 {
-   device_id: int,
-   mcc: int,
-   mnc: int,
-   info: String
+   "device_id": int,
+   "mcc": int,
+   "mnc": int,
+   "info": String
 }
 ```
 
 ### response
 ```json
 //failed
-	{'result': 'failed' }
+	{"result": "failed"}
 //success
-	{'result': 'success' }
+	{"result": "success"}
 ```
 
 ## add a new record
@@ -98,25 +98,25 @@ insert a new device
 ### Data Params
 ```json
 {
-   created_time: timeStamp,
-   device_id: int,
-   signal: [
+   "created_time": timeStamp,
+   "device_id": int,
+   "signal": [
    		{
-   			lac: int,
-   			bass: int
+   			"lac": int,
+   			"bass": int
    		},
    		{
-   			lac: int,
-   			bass: int
+   			"lac": int,
+   			"bass": int
    		},
    		...
    ],
-	gps: {
-		latitude: double,
-		longitude: double
+	"gps": {
+		"latitude": double,
+		"longitude": double
 	},
-	state:{
-		'battery_usage': double
+	"state":{
+		"battery_usage": double
 	}
 }
 ```
@@ -124,9 +124,9 @@ insert a new device
 ### response
 ```json
 //failed
-	{'result': 'failed' }
+	{"result": "failed"}
 //success
-	{'result': 'success' }
+	{"result": "success"}
 ```
 
 
