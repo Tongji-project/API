@@ -8,7 +8,7 @@ use nodejs and mongodb to handle frenquent request of inserting data
 
 #### URL
 
-`tztztztztz.org:3000/devices`
+`IP:3000/devices`
 
 #### Method
 GET
@@ -21,7 +21,7 @@ fetch all the devices from remote database
 
 #### URL
 
-`tztztztztz.org:3000/records`
+`IP:3000/records`
 
 #### Method
 GET
@@ -34,7 +34,7 @@ fetch all the records from remote database
 
 #### URL
 
-`tztztztztz.org:3000/device`
+`IP:3000/device`
 
 #### Method
 POST
@@ -47,7 +47,7 @@ insert a new device
 
 #### URL
 
-`tztztztztz.org:3000/record`
+`IP:3000/record`
 
 #### Method
 POST
