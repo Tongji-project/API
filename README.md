@@ -3,58 +3,132 @@
 use nodejs and mongodb to handle frenquent request of inserting data
 
 ## api
+- [fetch devices](#fetch-all-the-devices)
+- [fetch records](#fetch-all-the-records)
+- [add device](#add-a-new-device)
+- [add record](#add-a-new-record)
 
-### fetch all the devices
+## fetch all the devices
 
-#### URL
+### URL
 
 `IP:3000/devices`
 
-#### Method
+### Method
 GET
 
-#### description
+### description
 
 fetch all the devices from remote database
 
-### fetch all the records
+### response
+```json
+//failed
+	{'result': 'failed' }
+//success
+	{'result': 'success' }
+```
 
-#### URL
+## fetch all the records
+
+### URL
 
 `IP:3000/records`
 
-#### Method
+### Method
 GET
 
-#### description
+### description
 
 fetch all the records from remote database
 
-### add a new device
+### response
+```json
+//failed
+	{'result': 'failed' }
+//success
+	{'result': 'success' }
+```
 
-#### URL
+
+## add a new device
+
+### URL
 
 `IP:3000/device`
 
-#### Method
+### Method
 POST
 
-#### description
+### description
 
 insert a new device 
 
-### add a new record
+### Data Params
+```json
+{
+   device_id: int,
+   mcc: int,
+   mnc: int,
+   info: String
+}
+```
 
-#### URL
+### response
+```json
+//failed
+	{'result': 'failed' }
+//success
+	{'result': 'success' }
+```
+
+## add a new record
+
+### URL
 
 `IP:3000/record`
 
-#### Method
+### Method
 POST
 
-#### description
+### description
 
 insert a new device 
+
+### Data Params
+```json
+{
+   created_time: timeStamp,
+   device_id: int,
+   signal: [
+   		{
+   			lac: int,
+   			bass: int
+   		},
+   		{
+   			lac: int,
+   			bass: int
+   		},
+   		...
+   ],
+	gps: {
+		latitude: double,
+		longitude: double
+	},
+	state:{
+		'battery_usage': double
+	}
+}
+```
+
+### response
+```json
+//failed
+	{'result': 'failed' }
+//success
+	{'result': 'success' }
+```
+
 
 
 
