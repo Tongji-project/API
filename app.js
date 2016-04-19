@@ -49,6 +49,12 @@ app.get('/records', function (req, res) {
   });
 })
 
+app.post('/records', function (req, res) {
+    req.body.forEach(function (elem) {
+        insertQueue.push({'collection': 'record', 'document': elem});
+    });
+    res.send({'result':'succuss'})
+})
 
 app.post('/device', function (req, res) {    
     insertQueue.push({'collection': 'device', 'document': req.body}, function (err) {
@@ -66,3 +72,21 @@ app.get('/devices', function (req, res) {
 var server = app.listen(3000, function () {
     console.log('Listening on port %d', server.address().port);
 })
+
+
+// var express = require('express')
+// var multer  = require('multer')
+// var upload = multer({ dest: 'uploads/' })
+
+// var app = express()
+
+// app.post('/profile', upload.single('avatar'), function (req, res, next) {
+//   // req.file is the `avatar` file
+//   // req.body will hold the text fields, if there were any
+//   console.log(req.file)
+//   console.log('body:', req.body);
+//   res.send('123')
+// })
+
+// app.listen(3000);
+
